@@ -14,18 +14,16 @@ export const todoSlice = createSlice({
       state.todo = [...state.todo, action.payload];
     },
     deleteTodo: (state: TodoInitial, action: PayloadAction<number>) => {
-      state.todo = [...state.todo.filter((item) => item.id != action.payload)];
+      state.todo = [
+        ...state.todo.filter((item: Todo) => item.id != action.payload),
+      ];
     },
     updateTodo: (state: TodoInitial, action: PayloadAction<Todo>) => {
-      //   let data =  state.todo.filter((item: Todo) =>
-      //       item.id == action.payload.id
-      //     )
-      //     console.log(data);
-      console.log(action.payload.id);
-      state.todo = state.todo.filter((item) => {
-        if (item.id == action.payload.id) {
-        }
-      });
+      state.todo = [
+        ...state.todo.map((item: Todo) =>
+          item.id == action.payload.id ? action.payload : item
+        ),
+      ];
     },
   },
 });
