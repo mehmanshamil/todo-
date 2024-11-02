@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form .homeTodo {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+form input {
+    outline: none;
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    border-bottom: 1px solid black;
+}
+
+form {
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+button {
+    background-color: black;
+    color: #fff;
+    transition: 1s;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+ul {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+
+}
+
+ul li {
+    width: 20%;
+    background-color: black;
+    padding: 1rem;
+    transition: 1s;
+    list-style-type: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+ul li:hover {
+    background-color: #fff;
+    color: black
+}
+
+.btns {
+    display: flex;
+    gap: 1rem;
+
+}
